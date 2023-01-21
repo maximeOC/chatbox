@@ -16,11 +16,11 @@ const MessageForm = (props) => {
     event.preventDefault();
 
     const text = value.trim();
+    console.log(text);
 
     if (text.length > 0) {
       sendMessage(creds, chatId, { text });
     }
-
     setValue('');
   };
 
@@ -32,7 +32,7 @@ const MessageForm = (props) => {
     <form className="message-form" onSubmit={handleSubmit}>
       <input
         className="message-input"
-        placeholder="Envoyer un message"
+        placeholder="Envoyez un message ..."
         value={value}
         onChange={handleChange}
         onSubmit={handleSubmit}
